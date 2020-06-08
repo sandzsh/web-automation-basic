@@ -17,6 +17,7 @@ public class HomePageLoggedIn extends HomePage {
     addElement("privacySecurityButton", "button[aria-label='Show Privacy and Security Menu']");
     addElement("addToBasket", "button[aria-label='Add to Basket']");
     addElement("changePassword", "button[aria-label='Go to change password page']");
+
   }
   // Methods
   public SelenideElement getMainElement(){
@@ -32,6 +33,7 @@ public class HomePageLoggedIn extends HomePage {
         PageManager.setCurrentPage(PageManager.getBasketPage()); break;
       case "changePassword":
         PageManager.setCurrentPage(PageManager.getChangePasswordPage()); break;
+
       default: super.navigate(element);
     }
   }
